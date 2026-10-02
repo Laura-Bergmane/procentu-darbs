@@ -1,0 +1,56 @@
+class BankasKonts:
+  def __init__(self, ipasnieks: str):
+    self.ipasnieks = ipasnieks
+    self.bilance : float = 0.0
+
+  def ieskaitit(self, summa : float):
+    if summa>0:
+      print(f"Ieskaitīta summa : {summa}, bilance: {self.bilance}")
+  
+  def iznemt(self, summa : float):
+    if summa <= 0:
+      print(f"Izņemtā summa : {summa}, bilance : {self.bilance}")
+  def parbaudit_bilanci(self):
+    print(f"Konta īpašnieks: {self.ipasnieks}, konta bilance: {self.bilance}")
+    
+konts = BankasKonts("Laura Bergmane")
+konts.ieskaitit = 9
+konts.iznemt = 4
+print(konts.parbaudit_bilanci)
+
+
+
+--------------------------------------------------------
+class Grāmata:
+  def __init__(self, nosaukums : string, autors : string, izdos_g : int):
+    self.nosaukums = nosaukums
+    self.autors = autors
+    self.izdos_g = izdos_g
+  def __repr__(self):
+    print(f"{self.autors} - '{self.nosaukums}' ({self.izdos_g})")
+class Grāmatplaukts:
+  def pievienot_gramatu(gramata):
+    self.gramatas.append(gramata)
+    print(f"Pievienota grāmata: {gramata}")
+    
+  def paradit_visas_gramatas(self):
+    print("Grāmatu saraksts ir tukšs.")
+
+  def atrast_gramatu_pec_autora(autors):
+    pass
+
+  gramata1 = Grāmata("Five Survive")
+  gramata2 = Grāmata("Not Quite Dead Yet")
+  plaukts = Grāmatplaukts("Metamorphosis")
+
+  print("Visas grāmatas grāmatu plauktā ir: ")
+    
+--------------------------------------------------------------
+Teorētiskā daļa
+1) Konstruktors ir metode Python valodā, kas tiek izsaukta automātiski, kad tiek izprintēts kāds objekts. Galvenais uzdevums ir piešķirt sākuma vērtības, lai tās var pēc tam izmantot kodā.
+
+"self" parametrs ir konkrētais klases objekts, kuru tajā brīdī izmanto jeb ar to strādā. Tas ir nepieciešams, lai atšķirtu citus objektus no tieši tā, ar kuru vēlos strādāt.
+
+2) Abstrakcija ir koncepts Python, kas ļauj objektiem ar metodēm, kam ir vienāds nosaukums, tikt izsauktiem vispārējā veidā.
+
+3)Klases mainīgie ir tie, kas pieder klasei un kopīgs visiem objektiem. Instances mainīgais glabājas tikai vienā vietā. 
